@@ -1,0 +1,11 @@
+# npm package files
+node_modules
+
+# npm error Log
+npm-debug.log
+
+# environment variables
+.env
+
+# vscode settings
+.vscode
