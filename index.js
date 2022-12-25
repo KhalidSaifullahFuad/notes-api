@@ -1,6 +1,13 @@
 // Dependency
 const express = require('express');
 const app = express();
+require('dotenv').config();
+
+// Middleware
+app.use(express.json());
+
+// Router
+app.use('/api/notes', require('./src/routers/note.router'));
 
 // Environment Variables
 const PORT = process.env.PORT || 3000;
