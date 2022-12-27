@@ -10,11 +10,20 @@ const noteSchema = new Mongoose.Schema({
     content: {
         type: String,
         required: true
+    },
+    tags: {
+        type: [String],
+        required: false
+    },
+    date: {
+        type: Date,
+        required: false,
+        default: new Date().toISOString()
     }
 });
 
 // Model
-const Note = Mongoose.model('Note', noteSchema);
+const Note = Mongoose.model('Note', noteSchema, 'notes_db');
 
 // Export
 module.exports = Note;
