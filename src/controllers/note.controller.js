@@ -47,7 +47,7 @@ exports.findAll = (req, res) => {
         if (!notes.length) {
             return res.status(404).send({ message: "No notes found" });
         }
-        res.send(notes);
+        res.send({notes});
     })
     .catch((err) => {
         res.status(500).send({ message: "Couldn't retrieve notes" });
