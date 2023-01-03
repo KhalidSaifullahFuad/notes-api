@@ -12,11 +12,11 @@ router.post("/batch", noteController.create);
 
 router.get("/", noteController.findAll);
 
-router.get("/:id", noteController.findOne);
+router.get("/:noteId", noteController.findOne);
 
-router.put("/:id", noteController.update);
+router.put("/:noteId", noteController.update);
 
-router.delete("/:id", noteController.remove);
+router.delete("/:noteId", noteController.remove);
 
 router.get("/search", noteController.search);
 
