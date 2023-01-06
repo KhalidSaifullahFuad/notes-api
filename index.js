@@ -7,6 +7,7 @@ require("dotenv").config();
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.options("*", cors()); // enable pre-flight
 
 // Router
 app.use("/api/notes", require("./src/routers/note.router"));
